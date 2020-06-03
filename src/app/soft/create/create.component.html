@@ -1,0 +1,55 @@
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1>Software List</h1>
+    <p class="lead text-muted">
+      Create a new software data
+    </p>
+  </div>
+</section>
+
+<div class="col-md-8 order-md-1">
+  <h4 class="mb-3">Fill the data</h4>
+  <form [formGroup]="softForm" (ngSubmit)="create()">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="firstName">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder=""
+          value=""
+          required
+          formControlName="title"
+        />
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="lastName">Excerpt</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder=""
+          value=""
+          required
+          formControlName="excerpt"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label for="firstName">Content</label>
+        <textarea
+          class="form-control"
+          rows="3"
+          formControlName="content"
+        ></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button type="submit" class="btn btn-secondary my-2">
+          Create
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

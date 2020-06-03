@@ -1,0 +1,36 @@
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1>Software List</h1>
+    <p class="lead text-muted">
+      This is a test by Aaron Luna
+    </p>
+    <p>
+      <button class="btn btn-secondary my-2" routerLink="/soft/create/">
+        New
+      </button>
+    </p>
+  </div>
+</section>
+<div
+  class="container min-vh-100 d-flex justify-content-center align-items-center Aligner-item"
+>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+        <th scope="col">Excerpt</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let soft of software">
+        <th scope="row">{{ soft.id }}</th>
+        <td>{{ soft.title }}</td>
+        <!-- Here I remove some text because the content is very long -->
+        <td>{{ soft.content | slice: 0:150 }} ...</td>
+        <td>{{ soft.excerpt }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
